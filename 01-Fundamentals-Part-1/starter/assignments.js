@@ -29,3 +29,29 @@ let description =
 console.log(description);
 
 //strings and template literals
+description =
+  "Porutgal is in Europe, and its 11 million people speak portuguese";
+console.log(description);
+
+// type conversion and coercion
+//4
+//617
+//23
+//false
+//1143
+
+console.log("9" - "5");
+console.log("19" - "13" + "17");
+console.log("19" - "13" + 17);
+console.log("123" < 57);
+console.log(5 + 6 + "4" + 9 - 4 - 2);
+
+// equality operators
+const numNeighbors = prompt("How many neighbors does your country have?");
+if (Number(numNeighbors) === 1) {
+  console.log("Only 1 border!");
+} else if (Number(numNeighbors) > 1) {
+  console.log("More than 1 border.");
+} else {
+  console.log("No borders.");
+}
