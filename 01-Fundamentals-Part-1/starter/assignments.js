@@ -47,11 +47,18 @@ console.log("123" < 57);
 console.log(5 + 6 + "4" + 9 - 4 - 2);
 
 // equality operators
-const numNeighbors = prompt("How many neighbors does your country have?");
-if (Number(numNeighbors) === 1) {
-  console.log("Only 1 border!");
-} else if (Number(numNeighbors) > 1) {
-  console.log("More than 1 border.");
+// const numNeighbors = prompt("How many neighbors does your country have?");
+// if (Number(numNeighbors) === 1) {
+//   console.log("Only 1 border!");
+// } else if (Number(numNeighbors) > 1) {
+//   console.log("More than 1 border.");
+// } else {
+//   console.log("No borders.");
+// }
+
+// logical operators
+if (language === "english" && !isIsland && population < 50_000_000) {
+  console.log(`You should live in ${country}.`);
 } else {
-  console.log("No borders.");
+  console.log(`${country} does not meet your criteria.`);
 }

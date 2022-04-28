@@ -36,3 +36,31 @@ if (bmiJohn > bmiMark) {
 } else {
   console.log(`Mark's BMI (${bmiMark}) is higher than John's (${bmiJohn})!`);
 }
+
+// coding challenge #3
+const dolphinsAvgScore = (96 + 108 + 89) / 3;
+const koalasAvgScore = (88 + 91 + 110) / 3;
+
+if (dolphinsAvgScore > koalasAvgScore) {
+  if (dolphinsAvgScore < 100) {
+    console.log("No winner!");
+  } else {
+    console.log(
+      `Dolphins are the winner with an average score of ${dolphinsAvgScore}`
+    );
+  }
+} else if (dolphinsAvgScore < koalasAvgScore) {
+  if (koalasAvgScore < 100) {
+    console.log("No winner!");
+  } else {
+    console.log(
+      `Koalas are the winnder with an average score of ${koalasAvgScore}`
+    );
+  }
+} else {
+  if (koalasAvgScore >= 100 && dolphinsAvgScore >= 100) {
+    console.log("Tie game!");
+  } else {
+    console.log("No winner!");
+  }
+}
