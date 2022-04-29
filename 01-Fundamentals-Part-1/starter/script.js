@@ -216,3 +216,9 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day!");
 }
+
+// conditional (ternary) operator
+const age = 23;
+age >= 18
+  ? console.log("I like to drink wine")
+  : console.log("I like to drink water");
