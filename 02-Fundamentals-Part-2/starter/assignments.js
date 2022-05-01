@@ -75,3 +75,27 @@ const percentages = [
 ];
 
 console.log(percentages);
+
+// basic array operations (methods)
+const neighbors = ["Canada", "Mexico"];
+
+neighbors.push("Utopia");
+neighbors.pop("Utopia");
+
+if (!neighbors.includes("Germany")) {
+  console.log("Probably not a central European country :D");
+}
+
+neighbors[neighbors.indexOf("Mexico")] = "Unknown";
+console.log(neighbors);
+
+// introduction to objects
+const myCountry = {
+  country: "USA",
+  capital: "Washington D.C.",
+  language: "english",
+  population: 350_000_000,
+  neighbors: ["Canada", "Mexico"],
+};
+
+console.log(myCountry);
