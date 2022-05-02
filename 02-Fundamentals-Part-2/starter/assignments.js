@@ -96,6 +96,31 @@ const myCountry = {
   language: "english",
   population: 350_000_000,
   neighbors: ["Canada", "Mexico"],
+
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} people, ${this.neighbors.length} neighboring countries and a captital called ${this.capital}.`
+    );
+  },
+
+  checkIsIsland: function () {
+    this.isIsland = neighbors.length === 0 ? true : false;
+  },
 };
 
 console.log(myCountry);
+
+// dot vs. bracket notation
+console.log(
+  `${myCountry.country} has ${myCountry.population} people, ${myCountry.neighbors.length} neighboring countries and a captital called ${myCountry.capital}.`
+);
+
+myCountry.population = myCountry.population + 2_000_000;
+console.log(myCountry.population);
+myCountry["population"] = myCountry["population"] - 2_000_000;
+console.log(myCountry.population);
+
+// object methods
+myCountry.describe();
+myCountry.checkIsIsland();
+console.log(myCountry.isIsland);
