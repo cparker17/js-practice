@@ -71,7 +71,6 @@ if (mark.BMI > john.BMI) {
 }
 
 // coding challenge #4
-
 const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips2 = [];
 const totals2 = [];
@@ -92,4 +91,4 @@ const calcAverage2 = function (arr) {
   }
   return sum / arr.length;
 };
-console.log(calcAverage2(bills2));
+console.log(calcAverage2(totals2));
