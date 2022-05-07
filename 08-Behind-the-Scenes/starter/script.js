@@ -24,3 +24,13 @@ function calcAge(birthYear) {
 
 const firstName = 'Chris';
 calcAge(1984);
+
+console.log(me);
+//console.log(job);
+//console.log(year);
+
+var me = 'Chris';
+let job = 'contractor';
+const year = 1984;
+
+console.log(this);
