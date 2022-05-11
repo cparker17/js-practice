@@ -320,3 +320,56 @@ console.log(question.get(question.get('correct') === answer));
 
 // convert map to an array
 console.log([...question]);
+
+const airline = 'TAP Ait Portgual';
+const plane = 'A320';
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+
+//position at which extraction will start (sub-string) -> does not change the underlying string
+console.log(airline.slice(4));
+
+// stops extracting before reaching index 7
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+const passenger = 'jOnAS';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+const email = 'hello@jonas.io';
+const loginEmail = '  Hello@jonas.Io \n';
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+console.log('a+very+nice+string'.split('+'));
+console.log('Chris Parker'.split(' '));
+const [firstName, middleName, lastName] = 'Christopher Michael Parker'.split(
+  ' '
+);
+
+const newName = ['Mr.', firstName, middleName, lastName.toUpperCase()].join(
+  ' '
+);
+console.log(newName);
