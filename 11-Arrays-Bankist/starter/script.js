@@ -73,4 +73,89 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = ' ';
+
+  movements.forEach((mov, i) => {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+  <div class="movements__row">
+  <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+  <div class="movements__value">${mov}</div>
+</div>`;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
+
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// // SLICE METHOD
+// console.log(arr.slice(2));
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(-2));
+
+// //get last element of array
+// console.log(arr.slice(-1));
+
+// console.log(arr.slice(1, -2));
+
+// // next two functions produce same value
+// console.log(arr.slice());
+// console.log([...arr]);
+
+// // SPLICE METHOD
+// //console.log(arr.splice(2));
+// // splice has deleted 1st two elements (mutated original array)
+// console.log(arr);
+
+// arr.splice(-1);
+// console.log(arr);
+
+// arr.splice(1, 2);
+// console.log(arr);
+
+// // REVERSE
+// arr = ['a', 'b', 'c', 'd', 'e'];
+// let arr2 = ['j', 'i', 'h', 'g', 'f'];
+
+// console.log(arr2.reverse());
+// // reverse mutates the array:
+// console.log(arr2);
+
+// let letters = arr.concat(arr2);
+// console.log(arr);
+// console.log(letters);
+
+// // JOIN
+// console.log(letters.join(' - '));
+
+// // AT METHOD
+// arr = [23, 11, 64];
+// console.log(arr[0]);
+// console.log(arr.at(0));
+
+// // getting last array element
+// console.log(arr.at(-1));
+
+// // LOOPING ARRAYS: FOR EACH
+// for (let movement of movements) {
+//   if (movement > 0) {
+//     console.log(`You deposited ${movement}`);
+//   } else {
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// }
+
+// movements.forEach(movement =>
+//   movement > 0
+//     ? console.log(`You deposited ${movement}`)
+//     : console.log(`You withdrew ${Math.abs(movement)}`)
+// );
+
+// // FOR-EACH WITH MAPS AND SETS
+// currencies.forEach((value, key, map) => console.log(`${key}: ${value}`));
