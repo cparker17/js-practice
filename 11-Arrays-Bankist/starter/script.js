@@ -159,3 +159,36 @@ displayMovements(account1.movements);
 
 // // FOR-EACH WITH MAPS AND SETS
 // currencies.forEach((value, key, map) => console.log(`${key}: ${value}`));
+
+const eurToUsd = 1.1;
+
+// map method
+const movementsUSD = movements.map(e => e * eurToUsd);
+console.log(movements);
+console.log(movementsUSD);
+
+// filter method
+let deposits = movements.filter(e => e > 0);
+
+// reduce method
+let balance = movements.reduce((acc, e) => acc + e, 0);
+console.log(balance);
+
+let max = movements.reduce((acc, e) => (e > acc ? e : acc), movements[0]);
+console.log(max);
+
+// pipeline (chaining)
+let totalDepositUSD = movements
+  .filter(e => e > 0)
+  .map(e => e * eurToUsd)
+  .reduce((acc, e) => acc + e, 0);
+console.log(totalDepositUSD);
+
+// find method (return 1st element of array, not the whole array)
+let firstWithdrawal = movements.find(e => e < 0);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+let account = accounts.find(e => e.owner === 'Jessica Davis');
+console.log(account);
